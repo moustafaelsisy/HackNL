@@ -1,10 +1,10 @@
 const palette = {
-	lightblue: "#2e9cca", 
-	white:     "#ffffff", 
-	deepblue:  "#25274d",
-	bluegrey:  "#464866", 
-	navyblue:  "#29648a", 
-	grey:      "#aaabb8"
+	sky:    "#2e9cca", 
+	white:  "#ffffff", 
+	navy:   "#25274d",
+	slate:  "#464866", 
+	aegean: "#29648a", 
+	grey:   "#aaabb8"
 }
 
 export default palette
