@@ -16,10 +16,9 @@ const borderRadii = {
 };
 
 const Wrapper = styled.div`
-    font-size: 2rem;
     background-color: ${({backgroundColor}) => palette[backgroundColor]};
     color: ${({color}) => palette[color]};
-    border-radius: ${({borderRadius}) => borderRadii[borderRadius]}
+    border-radius: ${({borderRadius}) => borderRadii[borderRadius]};
     display: inline-block;
     padding: 1rem 2rem;
     
@@ -28,20 +27,23 @@ const Wrapper = styled.div`
       ${({onHover}) => hoverOptions[onHover] || hoverOptions["darken"]}
     }
     
-    span{
-      vertical-align: middle;
+    span, p {
+      font-size: 2rem;
+    }
+    
+    p{
+      margin: 0;
+      font-weight: 400;
       display: inline-block;
     }
 `;
 
-const Button = (color, backgroundColor, borderRadius, onHover, icon, text) => {
+const Button = ({color, backgroundColor, borderRadius, onHover, icon, text}) => {
 
   const iconStyles = {
     display: icon ? "inline-block" : "none",
     fontSize: "2rem",
-    verticalAlign: "middle",
-    color,
-    backgroundColor
+    color: palette[color]
   };
 
   return(
@@ -49,8 +51,8 @@ const Button = (color, backgroundColor, borderRadius, onHover, icon, text) => {
              backgroundColor={backgroundColor}
              borderRadius={borderRadius}
              onHover={onHover}>
-      <FontIcon classname="material-icons" style={iconStyles}>{icon}</FontIcon>
-      <span>{text}</span>
+      <FontIcon className="material-icons" style={iconStyles}>{icon}</FontIcon>
+      <p>{text}</p>
     </Wrapper>
   );
 }
