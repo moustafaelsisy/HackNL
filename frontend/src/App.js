@@ -26,7 +26,7 @@ class App extends Component {
             <h3>MUN CS Society</h3>
             <p>Rocket Launch</p>
             <a href="www.hacknl.ca">hacknl.ca</a>
-            <div><Button text="CLICK" onHover="brighten" icon="edit"/></div>
+            <div><Button text="CLICK" onHover="brighten" icon="edit" onClick={() => {}}/></div>
           </CenterDiv>
         </DemoTile>
       </div>
