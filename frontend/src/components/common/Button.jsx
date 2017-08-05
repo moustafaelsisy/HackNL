@@ -38,7 +38,7 @@ const Wrapper = styled.div`
     }
 `;
 
-const Button = ({color, backgroundColor, borderRadius, onHover, icon, text}) => {
+const Button = ({color, backgroundColor, borderRadius, onHover, icon, text, onClick}) => {
 
   const iconStyles = {
     display: icon ? "inline-block" : "none",
@@ -50,7 +50,8 @@ const Button = ({color, backgroundColor, borderRadius, onHover, icon, text}) => 
     <Wrapper color={color}
              backgroundColor={backgroundColor}
              borderRadius={borderRadius}
-             onHover={onHover}>
+             onHover={onHover}
+             onClick={() => onClick()}>
       <FontIcon className="material-icons" style={iconStyles}>{icon}</FontIcon>
       <p>{text}</p>
     </Wrapper>
@@ -63,7 +64,8 @@ Button.propTypes = {
   borderRadius: PropTypes.string,
   onHover: PropTypes.string,
   icon: PropTypes.string,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 Button.defaultProps = {
