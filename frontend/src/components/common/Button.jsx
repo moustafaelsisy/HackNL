@@ -52,7 +52,7 @@ const Button = ({color, backgroundColor, borderRadius, onHover, icon, text, onCl
              borderRadius={borderRadius}
              onHover={onHover}
              onClick={() => onClick()}>
-      <FontIcon className="material-icons" style={iconStyles}>{icon}</FontIcon>
+      <FontIcon className="material-icons" style={iconStyles} onClick={() => {}}>{icon}</FontIcon>
       <p>{text}</p>
     </Wrapper>
   );
