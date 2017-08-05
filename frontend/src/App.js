@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tile from './components/common/Tile'
 import Button from './components/common/Button'
+import Footer from './components/common/Footer'
 import styled from 'styled-components'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
@@ -29,6 +30,7 @@ class App extends Component {
             <div><Button text="CLICK" onHover="brighten" icon="edit" onClick={() => {}}/></div>
           </CenterDiv>
         </DemoTile>
+        <Footer></Footer>
       </div>
     </MuiThemeProvider>
     );
